@@ -1,0 +1,11 @@
+com\TSI\ITSgame\InventoryItem$inventoryItems.class
+com\TSI\ITSgame\Room.class
+com\TSI\ITSgame\Enemy$enermies.class
+com\TSI\ITSgame\Game.class
+com\TSI\ITSgame\Character.class
+com\TSI\ITSgame\Enemy.class
+com\TSI\ITSgame\Main.class
+com\TSI\ITSgame\PlayingField.class
+com\TSI\ITSgame\InventoryItem.class
+com\TSI\ITSgame\GameObjects.class
+com\TSI\ITSgame\Treasure.class

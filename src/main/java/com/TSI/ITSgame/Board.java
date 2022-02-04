@@ -10,11 +10,6 @@ public class Board
         return tiles;
     }
 
-    public Board()
-    {
-
-    }
-
     public void initialise()
     {
         for (int i = 0; i < tiles.length; i++)

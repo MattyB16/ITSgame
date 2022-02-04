@@ -1,7 +1,7 @@
 package com.TSI.ITSgame;
 
 public abstract class Enemy {
-    public Level level;
+    Level level;
 
     public Enemy(Level _level){
 

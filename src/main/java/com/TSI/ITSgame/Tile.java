@@ -1,14 +1,7 @@
 package com.TSI.ITSgame;
 
-import java.util.ArrayList;
-
 public class Tile
 {
-
-    public Tile()
-    {
-
-    }
 
     public void onCharacterEnter(Character player)
     {

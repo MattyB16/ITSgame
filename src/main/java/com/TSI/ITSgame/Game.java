@@ -25,7 +25,7 @@ public class Game
 
         System.out.println("You are dropped into a new world you are unfamiliar with.... the world of AUTOMATION TESTING.\nAll you know is that you are at position X:" + player.getPlayerPosX()+ "  Y:" + player.getPlayerPosY()+ " in this new world....Good luck!");
 
-        while (gameRunning = true)
+        while (gameRunning == true)
         {
             System.out.println("Enter direction W,A,S,D: ");
 
@@ -49,12 +49,23 @@ public class Game
                     player.moveDown(board);
                     break;
 
+                case "q":
+                    System.out.println("You quit game.");
+                    gameRunning = false;
+                    continue;
+
                 default:
                     System.out.println("Invalid movement Try again");
                     break;
             }
 
             player.HUD();
+
+            if (board.getTiles()[player.getPlayerPosX()][player.getPlayerPosY()].getClass() == GoalTile.class){
+
+                gameRunning = false;
+            }
+
 
         }
 

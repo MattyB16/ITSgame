@@ -1,11 +1,12 @@
 package com.TSI.ITSgame;
 
-public class Enemy {
+public abstract class Enemy {
+    public Level level;
 
-    enum enermies{
+    public Enemy(Level _level){
 
-        Dragon,
-        Spider
+        level = _level;
 
     }
+
 }

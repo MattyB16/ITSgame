@@ -25,6 +25,8 @@ public class Board
             }
         }
 
+        tiles[3][3] = new GoalTile();
+
     }
 
 }

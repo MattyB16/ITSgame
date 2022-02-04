@@ -2,10 +2,6 @@ package com.TSI.ITSgame;
 
 public class GoalTile extends Tile{
 
-    public GoalTile()
-    {
-
-    }
 
     @Override
     public void onCharacterEnter(Character player) {
@@ -13,6 +9,7 @@ public class GoalTile extends Tile{
         System.out.println("You win.");
 
     }
+
 }
 
 

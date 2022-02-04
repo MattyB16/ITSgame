@@ -31,7 +31,7 @@ public class Game
 
 
 
-            switch(inputControls.nextLine())
+            switch(inputControls.nextLine().toLowerCase())
             {
                 case "w":
                     player.moveUp(board);
@@ -59,12 +59,22 @@ public class Game
                     break;
             }
 
-            player.HUD();
-
             if (board.getTiles()[player.getPlayerPosX()][player.getPlayerPosY()].getClass() == GoalTile.class){
 
                 gameRunning = false;
             }
+
+            if (gameRunning == true){
+
+                player.HUD();
+            }
+            else{
+
+                System.out.println("The Goal was at tile X:3  Y:3.");
+
+            }
+
+
 
 
         }

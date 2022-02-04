@@ -5,7 +5,7 @@ public enum Level {
     Basic,
     Advanced,
     Epic,
-    Legendary,
+    Legendary
 }
 
 

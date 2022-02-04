@@ -107,7 +107,7 @@ public class Character {
 
     public void HUD(){
 
-        System.out.println("X:" + getPlayerPosX() + "  " + "Y:" + getPlayerPosY());
+        System.out.println("You are now at " + "X:" + getPlayerPosX() + "  " + "Y:" + getPlayerPosY());
     }
 
 

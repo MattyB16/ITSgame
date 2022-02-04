@@ -46,4 +46,32 @@ public class CharacterTest {
 
     }
 
+    @Test
+    public void testMoveDownMiddleBoard() {
+
+        Board dumby = new Board();
+        dumby.initialise();
+        Character testPlayer = new Character(6,6, "Big Jeff");
+
+        testPlayer.moveDown(dumby);
+
+        assertEquals(5, testPlayer.getPlayerPosY(), "That's not the correct new coordinate.");
+
+    }
+
+    @Test
+    public void testMoveDownBottomBoard() {
+
+        Board dumby = new Board();
+        dumby.initialise();
+        Character testPlayer = new Character(0,0, "Big Jeff");
+
+        testPlayer.moveDown(dumby);
+
+        assertEquals(11, testPlayer.getPlayerPosY(), "That's not the correct new coordinate.");
+
+    }
+
+
+
 }

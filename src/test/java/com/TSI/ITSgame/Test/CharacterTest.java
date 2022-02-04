@@ -7,15 +7,21 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CharacterTest {
-
+    
 
     @Test
-    public void testName() {
+    public void testCharacterConstruction() {
 
-        Character testPlayer = new Character(0,0, "Big Jeff");
+        Character testPlayer = new Character(2,5, "Big Jeff");
 
-        assertEquals("Big Jeff", testPlayer.getName(), "That's not his or her name");
+        assertEquals("Big Jeff", testPlayer.getName(), "Incorrect name.");
+
+        assertEquals(2, testPlayer.getPlayerPosX(), "Incorrect X position.");
+
+        assertEquals(5, testPlayer.getPlayerPosY(), "Incorrect Y position.");
     }
+
+
 
 
     @Test
@@ -30,7 +36,7 @@ public class CharacterTest {
 
 
 
-        assertEquals(7, testPlayer.getPlayerPosY(), "That's not the correct new coordinate.");
+        assertEquals(7, testPlayer.getPlayerPosY(), "Incorrect new coordinate.");
     }
 
     @Test
@@ -42,7 +48,7 @@ public class CharacterTest {
 
         testPlayer.moveUp(dummy);
 
-        assertEquals(0, testPlayer.getPlayerPosY(), "That's not the correct new coordinate.");
+        assertEquals(0, testPlayer.getPlayerPosY(), "Incorrect new coordinate.");
 
     }
 
@@ -55,7 +61,7 @@ public class CharacterTest {
 
         testPlayer.moveDown(dummy);
 
-        assertEquals(5, testPlayer.getPlayerPosY(), "That's not the correct new coordinate.");
+        assertEquals(5, testPlayer.getPlayerPosY(), "Incorrect new coordinate.");
 
     }
 
@@ -68,7 +74,7 @@ public class CharacterTest {
 
         testPlayer.moveDown(dummy);
 
-        assertEquals(11, testPlayer.getPlayerPosY(), "That's not the correct new coordinate.");
+        assertEquals(11, testPlayer.getPlayerPosY(), "Incorrect new coordinate.");
 
     }
 
@@ -81,7 +87,7 @@ public class CharacterTest {
 
         testPlayer.moveLeft(dummy);
 
-        assertEquals(5, testPlayer.getPlayerPosX(), "That's not the correct new coordinate.");
+        assertEquals(5, testPlayer.getPlayerPosX(), "Incorrect new coordinate.");
 
     }
 
@@ -94,7 +100,7 @@ public class CharacterTest {
 
         testPlayer.moveLeft(dummy);
 
-        assertEquals(11, testPlayer.getPlayerPosX(), "That's not the correct new coordinate.");
+        assertEquals(11, testPlayer.getPlayerPosX(), "Incorrect new coordinate.");
 
     }
 
@@ -107,7 +113,7 @@ public class CharacterTest {
 
         testPlayer.moveRight(dummy);
 
-        assertEquals(0, testPlayer.getPlayerPosX(), "That's not the correct new coordinate.");
+        assertEquals(0, testPlayer.getPlayerPosX(), "Incorrect new coordinate.");
 
     }
 
@@ -120,7 +126,7 @@ public class CharacterTest {
 
         testPlayer.moveRight(dummy);
 
-        assertEquals(7, testPlayer.getPlayerPosX(), "That's not the correct new coordinate.");
+        assertEquals(7, testPlayer.getPlayerPosX(), "Incorrect new coordinate.");
 
     }
 

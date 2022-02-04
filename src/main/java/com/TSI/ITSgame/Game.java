@@ -13,25 +13,25 @@ public class Game
 
     //Constructors
 
-    public Game()
+    public Game(Character _player)
     {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter Name: ");
-
-        player = new Character(scanner.nextLine());
         board = new Board();
         board.initialise();
-
+        player = _player;
     }
 
-    public void gameRun()
+    public void gameRun(IInputSource inputControls)
     {
-        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("You are dropped into a new world you are unfamiliar with.... the world of AUTOMATION TESTING.\nAll you know is that you are at position X:" + player.getPlayerPosX()+ "  Y:" + player.getPlayerPosY()+ " in this new world....Good luck!");
 
         while (gameRunning = true)
         {
+            System.out.println("Enter direction W,A,S,D: ");
 
-            switch(scanner.nextLine())
+
+
+            switch(inputControls.nextLine())
             {
                 case "w":
                     player.moveUp(board);
@@ -41,11 +41,11 @@ public class Game
                     player.moveLeft(board);
                     break;
 
-                case "s":
+                case "d":
                     player.moveRight(board);
                     break;
 
-                case "d":
+                case "s":
                     player.moveDown(board);
                     break;
 
@@ -54,9 +54,7 @@ public class Game
                     break;
             }
 
-
-
-
+            player.HUD();
 
         }
 

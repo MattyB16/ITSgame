@@ -15,10 +15,4 @@ public class Tile
         System.out.println(player.getName() + " moved to a new empty tile.");
     }
 
-    public void onCharacterExit(Character player)
-    {
-
-    }
-
-
 }

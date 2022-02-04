@@ -7,8 +7,14 @@ public class Main {
 
     public static void main(String args[]){
 
-        Game game = new Game();
-        game.gameRun();
+        IInputSource input = new ScannerInputSource();
+        System.out.println("Enter Name: ");
+        String characterName = input.nextLine().toLowerCase();
+
+        Character player = new Character(6,6,characterName);
+
+        Game game = new Game(player);
+        game.gameRun(input);
 
 
     }

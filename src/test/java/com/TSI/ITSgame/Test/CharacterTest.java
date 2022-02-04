@@ -18,22 +18,32 @@ public class CharacterTest {
     }
 
 
-//    @Test
-//    public void testMoveUpMiddleBoard() {
-//
-//        Character
-//
-//        moveUp()
-//
-//        assertEquals("Big Jeff", testPlayer.getName(), "That's not his or her name");
-//    }
-//
-//    @Test
-//    public void testMoveUpTopBoard() {
-//
-//        Character testPlayer = new Character(0,0, "Big Jeff");
-//
-//        assertEquals("Big Jeff", testPlayer.getName(), "That's not his or her name");
-//    }
+    @Test
+    public void testMoveUpMiddleBoard() {
+
+        Board dumby = new Board();
+        dumby.initialise();
+        Character testPlayer = new Character(6,6, "Big Jeff");
+
+        testPlayer.moveUp(dumby);
+
+
+
+
+        assertEquals(7, testPlayer.getPlayerPosY(), "That's not the correct new coordinate.");
+    }
+
+    @Test
+    public void testMoveUpTopBoard() {
+
+        Board dumby = new Board();
+        dumby.initialise();
+        Character testPlayer = new Character(11,11, "Big Jeff");
+
+        testPlayer.moveUp(dumby);
+
+        assertEquals(0, testPlayer.getPlayerPosY(), "That's not the correct new coordinate.");
+
+    }
 
 }

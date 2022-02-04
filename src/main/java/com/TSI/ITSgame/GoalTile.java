@@ -4,11 +4,15 @@ public class GoalTile extends Tile{
 
     public GoalTile()
     {
-        GoalPosition
+
     }
 
+    @Override
+    public void onCharacterEnter(Character player) {
 
+        System.out.println("You win.");
 
+    }
 }
 
 

@@ -13,15 +13,16 @@ public class Game
 
     //Constructors
 
-    public Game(Character _player)
+    public Game()
     {
-        this.player = _player;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter Name: ");
+
+        player = new Character(scanner.nextLine());
         board = new Board();
         board.initialise();
 
     }
-
-
 
     public void gameRun()
     {
@@ -30,7 +31,7 @@ public class Game
         while (gameRunning = true)
         {
 
-            switch(scanner.next())
+            switch(scanner.nextLine())
             {
                 case "w":
                     player.moveUp(board);
